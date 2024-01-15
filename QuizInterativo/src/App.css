@@ -1,0 +1,106 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.boxControl input[type="radio"]{
+
+  display: none;
+
+}
+
+.boxControl{
+
+  /* width: 50vw;
+  height: 50vh;
+  display: grid;
+  grid-template-areas:
+   "p1 p2"
+   "p3 p4"; */
+
+  padding: 0;
+  margin: 0; 
+
+}
+
+#box1 {
+
+  /* grid-area: p1; */
+  background-color: red;
+
+
+}
+
+#box2{
+
+  /* grid-area: p2; */
+  background-color: blue;
+  
+
+}
+
+#box3{
+
+  /* grid-area: p3; */
+  background-color: rgb(194, 194, 37);
+  
+}
+
+#box4{
+
+  /* grid-area: p4; */
+  background-color: green;
+  
+  
+}
+#box5{
+
+  /* grid-area: p4; */
+  background-color: rgb(146, 71, 21);
+  
+  
+}
+
+.box{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1% 0%; 
+  
+
+}
+
+.box p{
+
+  margin: 0;
+  padding: 0;
+
+} 
+
+.quiz,.respUsu{
+
+  display: none;
+
+}
+
+.quiz.load,.respUsu.load{
+
+  display: block;
+
+}
+
+.pontuacao{
+
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 18px;
+
+}
+
+
