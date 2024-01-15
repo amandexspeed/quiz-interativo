@@ -7,6 +7,329 @@ function App() {
 
   const [data,setData] = useState(null);
 
+  const perguntas = [
+    {
+      "pergunta": "Qual é a capital do Brasil?",
+      "alternativas": [
+        "Rio de Janeiro",
+        "São Paulo",
+        "Brasília",
+        "Salvador",
+        "Recife"
+      ],
+      "resposta": "c" 
+    },
+    {
+      "pergunta": "Qual é o maior osso do corpo humano?",
+      "alternativas": [
+        "Fêmur",
+        "Úmero",
+        "Tíbia",
+        "Rádio",
+        "Fíbula"
+      ],
+      "resposta": "a"
+    },
+    {
+      "pergunta": "Qual é o nome do maior rio do mundo em extensão?",
+      "alternativas": [
+        "Nilo",
+        "Amazonas",
+        "Yangtzé",
+        "Mississipi",
+        "Congo"
+      ],
+      "resposta": "b" 
+    },
+    {
+      "pergunta": "Qual é o nome do autor de Dom Casmurro?",
+      "alternativas": [
+        "Machado de Assis",
+        "José de Alencar",
+        "Aluísio Azevedo",
+        "Lima Barreto",
+        "Monteiro Lobato"
+      ],
+      "resposta": "a" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior deserto do mundo?",
+      "alternativas": [
+        "Saara",
+        "Gobi",
+        "Atacama",
+        "Kalahari",
+        "Antártica"
+      ],
+      "resposta": "e" 
+    },
+    {
+      "pergunta": "Qual é o nome da moeda oficial da União Europeia?",
+      "alternativas": [
+        "Euro",
+        "Libra",
+        "Franco",
+        "Dólar",
+        "Iene"
+      ],
+      "resposta": "a" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior animal do mundo?",
+      "alternativas": [
+        "Elefante",
+        "Girafa",
+        "Baleia azul",
+        "Tubarão branco",
+        "Dinossauro"
+      ],
+      "resposta": "c" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior planeta do sistema solar?",
+      "alternativas": [
+        "Terra",
+        "Saturno",
+        "Júpiter",
+        "Urano",
+        "Netuno"
+      ],
+      "resposta": "c"
+    },
+    {
+      "pergunta": "Qual é o nome do menor país do mundo em área?",
+      "alternativas": [
+        "Mônaco",
+        "Vaticano",
+        "Nauru",
+        "San Marino",
+        "Liechtenstein"
+      ],
+      "resposta": "b" 
+    },
+    {
+      "pergunta": "Qual é o nome do inventor da lâmpada elétrica?",
+      "alternativas": [
+        "Thomas Edison",
+        "Alexander Graham Bell",
+        "Nikola Tesla",
+
+        "Isaac Newton",
+        "Albert Einstein"
+      ],
+      "resposta": "a" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior oceano do mundo?",
+      "alternativas": [
+        "Atlântico",
+        "Pacífico",
+        "Índico",
+        "Ártico",
+        "Antártico"
+      ],
+      "resposta": "b" 
+    },
+    {
+      "pergunta": "Qual é o nome do primeiro presidente do Brasil?",
+      "alternativas": [
+        "Deodoro da Fonseca",
+        "Floriano Peixoto",
+        "Prudente de Morais",
+        "Campos Sales",
+        "Getúlio Vargas"
+      ],
+      "resposta": "a" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior continente do mundo em área?",
+      "alternativas": [
+        "África",
+        "América",
+        "Europa",
+        "Ásia",
+        "Oceania"
+      ],
+      "resposta": "d" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior país do mundo em área?",
+      "alternativas": [
+        "China",
+        "Estados Unidos",
+        "Canadá",
+        "Brasil",
+        "Rússia"
+      ],
+      "resposta": "e" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior vulcão do mundo em altura?",
+      "alternativas": [
+        "Vesúvio",
+        "Etna",
+        "Krakatoa",
+        "Mauna Loa",
+        "Cotopaxi"
+      ],
+      "resposta": "d" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior estádio de futebol do mundo em capacidade?",
+      "alternativas": [
+        "Maracanã",
+        "Camp Nou",
+        "Wembley",
+        "Azteca",
+        "Rungrado May Day"
+      ],
+      "resposta": "e" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior escritor brasileiro de todos os tempos, segundo a Academia Brasileira de Letras?",
+      "alternativas": [
+        "Machado de Assis",
+        "Carlos Drummond de Andrade",
+        "Guimarães Rosa",
+        "Jorge Amado",
+        "Ariano Suassuna"
+      ],
+      "resposta": "a" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior pintor brasileiro de todos os tempos, segundo o Museu de Arte Moderna de São Paulo?",
+      "alternativas": [
+        "Cândido Portinari",
+        "Tarsila do Amaral",
+        "Di Cavalcanti",
+        "Anita Malfatti",
+        "Romero Britto"
+      ],
+      "resposta": "a" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior cientista brasileiro de todos os tempos, segundo a Sociedade Brasileira para o Progresso da Ciência?",
+      "alternativas": [
+        "Oswaldo Cruz",
+        "Carlos Chagas",
+        "César Lattes",
+        "Vital Brazil",
+        "Santos Dumont"
+      ],
+      "resposta": "c"
+    },
+    {
+      "pergunta": "Qual é o nome do maior cantor brasileiro de todos os tempos, segundo a revista Rolling Stone Brasil?",
+      "alternativas": [
+        "Roberto Carlos",
+        "Caetano Veloso",
+        "Chico Buarque",
+        "Tim Maia",
+        "Tom Jobim"
+      ],
+      "resposta": "d" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior jogador de futebol brasileiro de todos os tempos, segundo a FIFA?",
+      "alternativas": [
+        "Pelé",
+        "Garrincha",
+        "Zico",
+        "Ronaldo",
+        "Neymar"
+      ],
+      "resposta": "a" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior filme brasileiro de todos os tempos, segundo a Academia Brasileira de Cinema?",
+      "alternativas": [
+        "Cidade de Deus",
+        "Tropa de Elite",
+        "Central do Brasil",
+        "O Auto da Compadecida",
+        "O Pagador de Promessas"
+      ],
+      "resposta": "c" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior monumento brasileiro de todos os tempos, segundo o Instituto do Patrimônio Histórico e Artístico Nacional?",
+      "alternativas": [
+        "Cristo Redentor",
+        "Teatro Amazonas",
+        "Pelourinho",
+        "Congresso Nacional",
+        "Ouro Preto"
+      ],
+      "resposta": "a"
+    },
+    {
+      "pergunta": "Qual é o nome do maior estado brasileiro em área?",
+      "alternativas": [
+        "Minas Gerais",
+        "Bahia",
+        "Pará",
+        "Amazonas",
+        "Mato Grosso"
+      ],
+      "resposta": "d" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior planeta-anão do sistema solar?",
+      "alternativas": [
+        "Plutão",
+        "Ceres",
+        "Éris",
+        "Haumea",
+        "Makemake"
+      ],
+      "resposta": "c" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior satélite natural do sistema solar?",
+      "alternativas": [
+        "Lua",
+        "Io",
+        "Europa",
+        "Titã",
+        "Ganimedes"
+      ],
+      "resposta": "e" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior país do mundo em população?",
+      "alternativas": [
+        "China",
+        "Índia",
+        "Estados Unidos",
+        "Indonésia",
+        "Brasil"
+      ],
+      "resposta": "a" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior dinossauro do mundo em comprimento?",
+      "alternativas": [
+        "Tiranossauro Rex",
+        "Braquiossauro",
+        "Diplodoco",
+        "Espinossauro",
+        "Argentinossauro"
+      ],
+      "resposta": "e" 
+    },
+    {
+      "pergunta": "Qual é o nome do maior prêmio da literatura mundial?",
+      "alternativas": [
+        "Nobel",
+        "Pulitzer",
+        "Booker",
+        "Goncourt",
+        "Camões"
+      ],
+      "resposta": "a" 
+    }
+  ];
+
   const ordemPerg = sortear();
   var jogada = 0;
   const quiz = document.querySelector(".quiz");
@@ -78,7 +401,7 @@ function App() {
   }; 
 
   useEffect(() => {
-    // cria um efeito para carregar os dados do JSON
+    /* // cria um efeito para carregar os dados do JSON
       axios.get("src/perguntas.json") // faz a requisição GET ao arquivo JSON
         .then((response) => {
           // se a requisição for bem sucedida
@@ -88,7 +411,9 @@ function App() {
         .catch((error) => {
           // se a requisição falhar
           console.error(error); // mostra o erro no console
-        });
+        }); */
+
+        setData(perguntas)
       
   }, []);
 
